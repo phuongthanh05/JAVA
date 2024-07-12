@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="" href="../css/bootstrap5.min.css">
+
+    <script src="../js/jquery-3.6.4.min.js"></script>
+
+    <script src="../js/bootstrap5.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="" href="../css/style.css">
+    <link rel="stylesheet" type="" href="../css/product.css">
+
+    <title>MSI</title>
+
+    <script>
+        $(document).ready(function () {
+            $('.navbar__dropdown').hover(function () {
+                $(this).find('.dropdown-menu').addClass('show');
+            }, function () {
+                $(this).find('.dropdown-menu').removeClass('show');
+            });
+        });
+    </script>
+
+    <script src="../js/discountprice.js"></script>
+    <script src="../js/giohang.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="toast__increasecart toast" role="alert" aria-live="assertive" aria-atomic="true"
+            style="position: fixed; top: 65px; right: 32px; z-index: 9999;">
+            <div class="toast-header d-flex justify-content-between">
+                <i class="fa-sharp fa-solid fa-circle-check fa-bounce text-success"></i>
+                <strong class="mr-auto text-success">Đặt hàng thành công</strong>
+                <small class="text-muted">just now</small>
+            </div>
+            <div class="toast-body">
+                Đến giỏ hàng để kiểm tra!!
+            </div>
+        </div>
+
+        <header class="container-fluid p-3">
+            <div class="row">
+                <a href="../index.html" class="header__logo col-lg-3 d-flex justify-content-center">
+                    <img src="../images/L.png" alt="" class="L.png" style="height: 100px; width: 100px;">
+                </a>
+                <div class="header__search d-flex align-items-center col-lg-5">
+                    <input type="" name="" value="" placeholder="Tìm kiếm sản phẩm"
+                        class="search__input p-2 flex-grow-1 border border-white rounded-pill">
+                    <button type="" class="btn btn-primary rounded-pill">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <div class="header__userinfo col-lg-4 d-flex align-items-center justify-content-around">
+                    <button type="" class="userinfo__bill btn btn-light">
+                        <a href="../kiemtradonhang.html" class="text-dark text-decoration-none">
+                            <strong>Kiểm tra đơn hàng</strong>
+                        </a>
+                    </button>
+
+                    <button type="" class="userinfo__cart btn btn-light p-2">
+                        <a href="../giohang.html" class="text-dark">
+                            <p class="cart__amount bg-info">
+                            </p>
+                            <i class="cart__icon fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </button>
+
+                    <button type="" class="userinfo__signin bg-light btn btn-outline-secondary">
+                        <a href="../signin.html" class="signin__link text-dark text-decoration-none">
+                            <i class="signin__icon far fa-user"></i>
+                            <span><strong>Tài khoản</strong></span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="nav__list navbar-nav gap-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Trang chủ</a>
+                    </li>
+                    <li class="navbar__dropdown nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sản phẩm
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="../html/MSI.html">MSI</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../html/Asus.html">Asus</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../html/Dell.html">Dell</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../gioithieu.html">Giới thiệu</a>
+                    </li>
+
+                   
+                </ul>
+            </div>
+        </nav>
+
+        <div class="store__panel container-fluid bg-black text-sm-center p-5">
+            <h1 class="store__panel__heading display-1"><strong>LAPTOPWORLD</strong></h1>
+        </div>
+
+
+        <main>
+            <section class="container-fluid bg-light d-flex justify-content-around p-5">
+                <h2 class=""><strong>MSI</strong></h2>
+                <select name="sort" id="">
+                    <option value="default">Mặc định</option>
+                    <option value="ascending">Sắp xếp: từ thấp đến cao</option>
+                    <option value="descending">Sắp xếp: từ cao đến thấp</option>
+                </select>
+            </section>
+
+            <section class="product__list album bg-light p-5">
+                <div class="container">
+                    <div class="row g-md-5">
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="..//images/Product/MSI/anh.jpg" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm.html">
+                                        Laptop MSI Gaming Thin 15 B12UCX-1419VN
+                                    </a>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                16.490.000₫ </p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                17.990.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="Asus" data-productindex="0">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh1.jpg" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm1.html">
+                                        Laptop MSI Gaming Katana A15 AI B8VE-402VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                28.490.000₫</p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                32.990.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="1">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh2.jpg" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm2.html">
+                                        Laptop MSI Gaming Stealth 16 AI Studio A1VGG-089VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                62.990.000₫ </p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                64.990.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="2">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh3.webp" alt=" "
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm3.html">
+                                        Laptop MSI Gaming Bravo 15 B7ED-010VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                15.990.000đ</p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                18.490.000đ</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="3">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh4.webp" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm4.html">
+                                        Laptop MSI Modern 15 <br> B7M-098VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                11.690.000₫</p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                16.490.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="4">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh5.webp" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm5.html">
+                                        Laptop MSI Pulse 17 <br> AI C1VGKG-017VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                50.490.000₫ </p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                55.990.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="5">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh6.webp" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm6.html">
+                                        Laptop MSI Crosshair 15 B12UEZ-460VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                26.490.000₫ </p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                34.990.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="6">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product__list__item col-md-3 mb-2">
+                            <div class="product__card card shadow-sm">
+                                <p class="product__discount"></p>
+                                <div class="product__img__container">
+                                    <img src="../images/Product/MSI/anh7.webp" alt=""
+                                        class="bd-placeholder-img card-img-top p-3">
+                                </div>
+                                <div class="product__body card-body">
+                                    <a class="product__name card-text text-decoration-none"
+                                        href="../html/chitietsanpham/chitietsanphamm7.html">
+                                        Laptop MSI Modern 15 A11M-1024VN
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <p
+                                                class="product__actualprice border border-danger text-sm-danger rounded p-1">
+                                                12.490.000₫ </p>
+                                            <p
+                                                class="product__initprice border border-secondary text-sm-muted rounded p-1 text-decoration-line-through">
+                                                16.990.000₫</p>
+                                        </div>
+                                        <button class="product__cart btn btn-sm btn-outline-secondary mb-lg-3"
+                                            data-productbrand="iphones" data-productindex="6">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+        </main>
+
+
+        <div class="container-fluid bg-black text-white">
+            <div class="container p-5">
+                <footer>
+                    <div class="row">
+                        <div class="col-6 col-sm-2 mb-3 font-weight-bold">
+                            <h5>Thông tin Nhóm </h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nguyễn Hữu
+                                        Nhâm</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nguyễn Thị Thu
+                                        Vui</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">hà Thị Phương
+                                        Thanh</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-2 mb-3">
+                            <h5>Hệ thống cửa hàng</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Số 1 Phố Xốm,Phú
+                                        Lãm,Hà Đông,Hà Nội</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-2 mb-3">
+                            <h5>Hướng dẫn mua hàng</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cách thức mua
+                                        hàng</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Chính sách thu hồi
+                                        hàng hoá</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Chính sách bảo
+                                        hành</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5 offset-sm-1 mb-3">
+                            <form>
+                                <h5>Đăng kí nhận bản tin</h5>
+                                <p>Thông báo hàng tháng về những gì mới và thú vị từ chúng tôi</p>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input id="newsletter1" type="text" class="form-control"
+                                        placeholder="Email address">
+                                    <button class="btn btn-primary" type="button">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                        <p>&copy; 2024 Nguyễn Hữu Nhâm</p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3">
+                                <a class="link-light" target="_blank" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-github" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="link-light" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="link-light" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

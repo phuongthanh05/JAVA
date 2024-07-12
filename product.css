@@ -1,0 +1,107 @@
+/* tạo bóng cho thẻ sản phẩm */
+.product__card:hover{
+    filter: drop-shadow(0.45rem 0.45rem 0.45rem red);
+    /* cursor: pointer; */
+}
+
+.product__name {
+    color: black;
+}
+
+/* đổi màu cho tên sản phẩm */
+/* .product__body .card-text:hover  { */
+.product__name:hover {
+    color: #0d6efd;
+    cursor: pointer;
+}
+
+
+/* Chỉnh hover ảnh sản phẩm */
+/* item__img__container{ */
+.product__img__container {
+    margin-left: 18px;
+}
+
+/* .item__img__container .bd-placeholder-img { */
+.product__img__container img {
+    display: block;
+    position: absolute;
+    width: 85%;
+    max-height: 80%;
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+}
+
+/* .item__img__container .bd-placeholder-img:hover { */
+.product__img__container img:hover {
+    transform: translateY(10px);
+    cursor: pointer;
+}
+
+/* Chỉnh màu chữ cho giá tiền */
+.product__body .btn-group .border{
+    --bs-border-opacity:0;
+    font-weight: bolder;
+}
+
+.product__body .btn-group span{
+    display: none;
+}
+
+/* chỉnh màu chữ cho giá */
+.product__actualprice {
+    color: red;
+}
+
+.product__initprice {
+    color: black;
+}
+
+/* chỉnh màu giỏ hàng khi hover */
+.product__body button:hover{
+    background-color: red;
+    color: white;
+}
+
+.product__body button {
+    position: absolute;
+    right: 10px ;
+    bottom: 10px;
+}
+
+/* fix cứng height cho từng thẻ sản phẩm */
+.product__card {
+    height: 400px !important;
+    position: relative;
+    border-radius: 5px 15px 15px 15px;
+}
+
+.product__body .btn-group{
+    position: absolute;
+    bottom: 5px;
+}
+
+.product__body .card-text{
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    font-size: 18px;
+}
+
+/* main {
+    margin-bottom: 50px;
+} */
+
+/* thẻ giảm giá */
+.product__discount {
+    background-color: red;
+    width: 30%;
+    color: #Fff;
+    text-align: center;
+    border-radius: 0 15px 15px 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    box-shadow: 2px 5px 3px rgba(255, 255, 0, 0.611);
+}

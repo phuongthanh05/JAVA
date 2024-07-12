@@ -1,0 +1,147 @@
+#wrapper {
+    /* height: 2000px; */
+    width: 100%;
+}
+
+header {
+    background-color: #000000;
+}
+
+.logo__img {
+    height: 80px;
+    width: 180px;
+}
+
+.store__panel__heading {
+    font-weight: 700;
+    animation: changetextcolor ease  4s infinite;
+}
+
+@keyframes changetextcolor {
+    0%{
+        color: #fff;
+        text-shadow: 2px 2px 1px #FFf
+    }
+    35% {
+        color: red;
+        text-shadow: 2px 2px 1px #FF0000
+    }
+    75% {
+        color: #59bfd9;
+        text-shadow: 2px 2px 1px #59bfd9;
+    }
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.b-example-divider {
+	height: 3rem;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+	flex-shrink: 0;
+	width: 1.5rem;
+	height: 100vh;
+}
+
+.bi {
+	vertical-align: -.125em;
+	fill: currentColor;
+}
+
+.nav-scroller {
+	position: relative;
+	z-index: 2;
+	height: 2.75rem;
+	overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+	display: flex;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.userinfo__bill:hover{
+	background-color: #0d6efd;
+	border: none;
+}
+
+.userinfo__cart:hover,.userinfo__cart a:hover{
+	background-color: #0d6efd;
+	border: none;
+}
+
+.userinfo__signin:hover{
+	background-color: #0d6efd;
+}
+
+.nav__list .nav-item a{
+  font-weight: bolder;
+}
+
+.nav__list .nav-item .dropdown-menu{
+  background-color: #212529;
+}
+
+.nav__list .nav-item .dropdown-menu li>a{
+	color: #fff;
+}
+
+.nav__list .nav-item .dropdown-menu li>a:hover {
+  	background-color: #212529;
+	color: #FF0000;
+}
+
+.nav__list .nav-item a:hover{
+	color: #FF0000;
+}
+
+.userinfo__cart {
+	position: absolute;
+}
+
+.userinfo__cart .cart__amount {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	color: #fff;
+	padding: 0 5px;
+	border-radius: 100%;
+}
+
+.header__search>input:focus{
+	outline: none;
+}
+
+.store__panel__heading {
+    font-weight: bolder;
+}
+
+.text-muted{
+	font-weight: bolder;
+	color: white;
+}
+
